@@ -206,6 +206,10 @@ body{
     font-size: 18px;
 }
 
+#tf .tf1, .tf2{
+    width: 50%;
+    float: left;
+}
 
 
 
