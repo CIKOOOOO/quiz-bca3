@@ -129,7 +129,7 @@
 			<h1>Your Score</h1>
 			<div id="score">00</div>
 	
-			<div class="tf">
+			<div id="tf">
 			<div class="tf1">
 						1. <span id="p1"></span><br>
 						2. <span id="p2"></span><br>

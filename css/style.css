@@ -194,7 +194,7 @@ body{
     font-size: 40px;
 }
 
-.container3 .tf{
+.container3 #tf{
     width: 60%;
     height: 200px;
     background-color: rgba(255, 255, 255, 0.7);
