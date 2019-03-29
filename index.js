@@ -54,7 +54,7 @@ function submitClick(){
 	.then(function(snapshot){
 		if(snapshot.hasChild(inputNickname)){
 			firebase.database().ref(`users/${inputNickname}/`).once("value", snapshot => {
-				if (snapshot.child("quiz3").val() != 0 || snapshot.child("quiz4").val() != 0){
+				if (snapshot.child("quiz11").val() != 0 || snapshot.child("quiz12").val() != 0){
 					window.alert("Cannot enter the game");
 					removeLoad();
 				 }
