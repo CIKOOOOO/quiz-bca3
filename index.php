@@ -26,6 +26,14 @@
 	<script src="index.js"></script>
 </head>
 <body id="body">
+	<div id="gone">
+		<input type="text" id="quest1">
+		<input type="text" id="quest2">
+		<input type="text" id="quest3">
+		<input type="text" id="quest4">
+		<input type="text" id="quest5">
+	</div>
+	
 	<!-- screen1 -->
 	<div id="bodycontainer1">
 		<div class="container1">
