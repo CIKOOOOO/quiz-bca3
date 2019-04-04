@@ -266,7 +266,8 @@ body{
         background-size: cover;
     }
 
-    .container1,.container2,.container3,#bodycontainer2, #bodycontainer3{
+    .container1, #bodycontainer2, #bodycontainer3, .container2,.container3{
+        display: none;
         visibility: hidden;
     }
 }
