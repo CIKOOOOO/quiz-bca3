@@ -199,9 +199,6 @@ function getValue(){
 		ans5 += 20*(25-parseInt(document.getElementById("quest5").value));
 	}
 	else ans5 += 5;
-
-	console.log(document.getElementById("quest1").value+" - "+document.getElementById("quest2").value+" - "+document.getElementById("quest3").value+" - "+document.getElementById("quest4").value+" - "+document.getElementById("quest5").value);
-
 	updateData(ans1,ans2,ans3,ans4,ans5);
 }
 
