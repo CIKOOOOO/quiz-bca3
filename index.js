@@ -1,9 +1,19 @@
 var downloadTimer;
+var arr = [];
+var checkId = firebase.database().ref("users");
+
+checkId.once("value")
+.then(function(snapshot){
+	snapshot.forEach(function(childSnapshot){
+		var id = childSnapshot.key;
+		arr.push(id);
+		console.log(arr);
+				
+	})
+});
 
 function showTotalScore(){
-	var firebaseRef = firebase.database();
-	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
-	var finalNickname = inputNickname.replace(/\s+/g, '');
+	var finalNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var checkNick = firebase.database().ref("users");
 
 	loadsc();
@@ -22,6 +32,7 @@ function showTotalScore(){
 
 				var quiz = {};
 				var total_point = 0;
+				var nickname;
 
 				for (let index = 1; index <= 20; index++) {
 					quiz[index] = snapshot.child("quiz"+index).val();
@@ -31,7 +42,10 @@ function showTotalScore(){
 					document.getElementById("p"+index).innerHTML = quiz[index];
 					total_point += quiz[index];
 				}
-
+				
+				nickname = snapshot.child("nickname").val();
+				console.log(nickname);
+				document.getElementById("nickname").innerHTML = nickname;
 				document.getElementById("score").innerHTML = total_point;
 			});
 		}
@@ -45,12 +59,11 @@ function showTotalScore(){
 
 function submitClick(){
 	var firebaseRef = firebase.database();
-	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
-	var finalNickname = inputNickname.replace(/\s+/g, '');
+	var finalNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var checkNick = firebase.database().ref("users");
 	document.documentElement.scrollTop = 0;
 	
-	if(finalNickname != ""){
+	// if(finalNickname != ""){
 		loadsc();
 
 		checkNick.once("value")
@@ -67,42 +80,44 @@ function submitClick(){
 				});
 			}
 			else{
-				firebaseRef.ref('users/'+finalNickname).set({
-					quiz1 : 0,
-					quiz2 : 0,
-					quiz3 : 0,
-					quiz4 : 0,
-					quiz5 : 0,
-					quiz6 : 0,
-					quiz7 : 0,
-					quiz8 : 0,
-					quiz9 : 0,
-					quiz10 : 0,
-					quiz11 : 0,
-					quiz12 : 0,
-					quiz13 : 0,
-					quiz14 : 0,
-					quiz15 : 0,
-					quiz16 : 0,
-					quiz17 : 0,
-					quiz18 : 0,
-					quiz19 : 0,
-					quiz20 : 0,
-					total_score : 0
-				},function(error){
-					if(error){
-						window.alert("Error");
-						removeLoad();
-					}
-					else{
-						trueCond();
-					}
-				});
+				window.alert("Id Not Found");
+				removeLoad();
+				// firebaseRef.ref('users/'+finalNickname).set({
+				// 	quiz1 : 0,
+				// 	quiz2 : 0,
+				// 	quiz3 : 0,
+				// 	quiz4 : 0,
+				// 	quiz5 : 0,
+				// 	quiz6 : 0,
+				// 	quiz7 : 0,
+				// 	quiz8 : 0,
+				// 	quiz9 : 0,
+				// 	quiz10 : 0,
+				// 	quiz11 : 0,
+				// 	quiz12 : 0,
+				// 	quiz13 : 0,
+				// 	quiz14 : 0,
+				// 	quiz15 : 0,
+				// 	quiz16 : 0,
+				// 	quiz17 : 0,
+				// 	quiz18 : 0,
+				// 	quiz19 : 0,
+				// 	quiz20 : 0,
+				// 	total_score : 0
+				// },function(error){
+				// 	if(error){
+				// 		window.alert("Error");
+				// 		removeLoad();
+				// 	}
+				// 	else{
+				// 		trueCond();
+				// 	}
+				// });
 			}
 		});	
-	}else{
-		window.alert("nickname tidak boleh kosong!")
-	}
+	// }else{
+	// 	window.alert("nickname tidak boleh kosong!")
+	// }
 }
 
 function loadsc(){
@@ -209,8 +224,7 @@ function getValue(){
 }
 
 function updateData(q1, q2, q3, q4, q5) {
-	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
-	var finalNickname = inputNickname.replace(/\s+/g, '');
+	var finalNickname = document.getElementById("inputNickname").value.toLowerCase();
 	const fb = firebase.database().ref();
 	var data = {
 		quiz11:q1,
@@ -224,12 +238,10 @@ function updateData(q1, q2, q3, q4, q5) {
 
 function submitData(){
 	getValue();
-	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
-	var finalNickname = inputNickname.replace(/\s+/g, '');
+	var finalNickname = document.getElementById("inputNickname").value.toLowerCase();
 	document.getElementById("bodycontainer1").style.display = "none";
 	document.getElementById("bodycontainer3").style.display = "block";
 	document.getElementById("bodycontainer2").style.display = "none";
-	document.getElementById("nickname").innerHTML = finalNickname;
 	document.documentElement.scrollTop = 0;
 
 	firebase.database()
@@ -238,6 +250,7 @@ function submitData(){
 		
 		var quiz = {};
 		var total_point = 0;
+		var nickname = snapshot.child("nickname").val();
 
 		for (let index = 1; index <= 20; index++) {
 			quiz[index] = snapshot.child("quiz"+index).val();
@@ -248,25 +261,25 @@ function submitData(){
 			total_point += quiz[index];
 		}
 
+		document.getElementById("nickname").innerHTML = nickname;
 		document.getElementById("score").innerHTML = total_point;
-		totalscore(total_point);
+		totalscore(total_point, nickname);
 	});
 }
 
-function totalscore(score) {
-	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
-	var finalNickname = inputNickname.replace(/\s+/g, '');
+function totalscore(score, nick) {
+	var finalNickname = document.getElementById("inputNickname").value.toLowerCase();
 	const fb = firebase.database().ref();
 	var data = {total_score:score};
-	pushTotalScore(score);
+	pushTotalScore(score, nickname);
 	fb.child('users/'+finalNickname).update(data);
 }
 
-function pushTotalScore(score){
-	var inputNickname = document.getElementById("inputNickname").value.toLowerCase();
-	var finalNickname = inputNickname.replace(/\s+/g, '');
+function pushTotalScore(score, nick){
+	var finalNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var firebaseRef = firebase.database().ref('leaderboard/'+finalNickname);
 	firebaseRef.set({
-		total_score : score
+		total_score : score,
+		nickname : nick
 	});
 }
