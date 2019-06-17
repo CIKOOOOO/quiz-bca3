@@ -150,7 +150,7 @@ body{
     padding: 10px 0px;
     font-size:16px;
     border: 1px solid #444;
-    width: 100%;
+    width: 98%;
 }
 
 .ansrow-1 input[type="radio"]:checked + label { 
@@ -179,7 +179,7 @@ body{
     padding: 10px 0px;
     font-size:16px;
     border: 1px solid #444;
-    width: 100%;
+    width: 98%;
 }
 
 .ansrow-2 input[type="radio"]:checked + label { 
