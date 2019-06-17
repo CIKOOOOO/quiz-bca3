@@ -7,7 +7,7 @@ checkId.once("value")
 	snapshot.forEach(function(childSnapshot){
 		var id = childSnapshot.key;
 		arr.push(id);
-		console.log(arr);
+		// console.log(arr);
 				
 	})
 });
@@ -44,7 +44,7 @@ function showTotalScore(){
 				}
 				
 				nickname = snapshot.child("nickname").val();
-				console.log(nickname);
+				// console.log(nickname);
 				document.getElementById("nickname").innerHTML = nickname;
 				document.getElementById("score").innerHTML = total_point;
 			});

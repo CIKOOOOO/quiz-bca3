@@ -9,7 +9,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>. -->
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
 		<script>
 		  // Initialize Firebase
@@ -56,74 +56,96 @@
 	<!-- screen 2 -->
 	<div id="bodycontainer2">
 		<div class="container2">
-		<progress value="0" max="25" id="progressBar"></progress>
+		<!-- <progress value="0" max="25" id="progressBar"></progress> -->
 			<div class="box">
-				<img src="/res/bca.png" width="100px" height="100px" alt="qimg">
-				<div class="question">21 x 11 = ?</div> 
+				<!-- <img src="/res/bca.png" width="100px" height="100px" alt="qimg"> -->
+				<div class="question">Apakah kepanjangan dari ATM?</div> 
 	
 				<div class="ansrow-1">
-					 <input id="ans-1" type="radio" name="question1" value="a">  222 <br>
-					 <input id="ans-2" type="radio" name="question1" value="b" onclick="clicked1()">  231
+					 <input id="ans-1" type="radio" name="question1" value="a">  
+					 <label for="ans-1">Automatic Teller Machine</label> <br>
+					 <input id="ans-2" type="radio" name="question1" value="b" onclick="clicked1()">
+					 <label for="ans-2">Automatic Teler Motor</label>
 				</div>
 				<div class="ansrow-2">
-					 <input id="ans-3" type="radio" name="question1" value="c">  213 <br>
-					 <input id="ans-4" type="radio" name="question1" value="d">  224
+					 <input id="ans-3" type="radio" name="question1" value="c">
+					 <label for="ans-3">Automated Teller Machine</label> <br>
+					 <input id="ans-4" type="radio" name="question1" value="d">
+					 <label for="ans-4">Automated Teler Motion</label>
 				</div>
 			</div>
 	
 			<div class="box">
-					<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
-					<div class="question">Berapa % cashback yang didapatkan saat Go-Payday?</div> 
+					<!-- <img src="/res/wheel1.png" width="100px" height="100px" alt="qimg"> -->
+					<div class="question">Dibawah ini adalah cara untuk melakukan Top up Go-Pay, kecuali</div> 
 		
 					<div class="ansrow-1">
-						<input id="ans-5" type="radio" name="question2" value="a">20%<br>
-						<input id="ans-6" type="radio" name="question2" value="b">30%
+						<input id="ans-5" type="radio" name="question2" value="a">
+						<label for="ans-5">Top up via driver Go-Jek</label> <br>
+						<input id="ans-6" type="radio" name="question2" value="b">
+						<label for="ans-6">Top up via Bank</label>
 				   </div>
 				   <div class="ansrow-2">
-						<input id="ans-7" type="radio" name="question2" value="c" onclick="clicked2()">50%<br>
-						<input id="ans-8" type="radio" name="question2" value="d">70%
+						<input id="ans-7" type="radio" name="question2" value="c" onclick="clicked2()">
+						<label for="ans-7">Top up via Online Shop</label> <br>
+						<input id="ans-8" type="radio" name="question2" value="d">
+						<label for="ans-8">Top up via Mini Market</label>
+
 				   </div>
 			</div>
 
 			<div class="box">
-				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
-				<div class="question">Ada berapa hari di bulan Februari 2018?</div> 
+				<!-- <img src="/res/wheel1.png" width="100px" height="100px" alt="qimg"> -->
+				<div class="question">Apakah kepanjangan dari EDC? </div> 
 		
 				<div class="ansrow-1">
-					<input id="ans-9" type="radio" name="question3" value="a" onclick="clicked3()">28<br>
-					<input id="ans-10" type="radio" name="question3" value="b">29
+					<input id="ans-9" type="radio" name="question3" value="a" onclick="clicked3()">
+					<label for="ans-9">Economic Data Calculator</label> <br>
+					<input id="ans-10" type="radio" name="question3" value="b">
+					<label for="ans-10">Electronis Data Capture</label>
+
 				</div>
 				<div class="ansrow-2">
-					<input id="ans-11" type="radio" name="question3" value="c">27<br>
-					<input id="ans-12" type="radio" name="question3" value="d">30
+					<input id="ans-11" type="radio" name="question3" value="c">
+					<label for="ans-11">Economic Data Calculator</label> <br>
+					<input id="ans-12" type="radio" name="question3" value="d">
+					<label for="ans-12">Electronic Data Capture</label>
 				</div>
 			</div>
 
 			<div class="box">
-				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
-				<div class="question">Siapa Pendiri Go-Jek?</div> 
+				<!-- <img src="/res/wheel1.png" width="100px" height="100px" alt="qimg"> -->
+				<div class="question">Apa status Go-Jek sekarang? </div> 
 		
 				<div class="ansrow-1">
-					<input id="ans-13" type="radio" name="question4" value="a">Jack Ma<br>
-					<input id="ans-14" type="radio" name="question4" value="b">Michaelangelo Moran
+					<input id="ans-13" type="radio" name="question4" value="a">
+					<label for="ans-13">Unicorn</label> <br>
+					<input id="ans-14" type="radio" name="question4" value="b">
+					<label for="ans-14">Decacorn</label>
 				</div>
 				<div class="ansrow-2">
-					<input id="ans-15" type="radio" name="question4" value="c">Kevin Aluwi<br>
-					<input id="ans-16" type="radio" name="question4" value="d" onclick="clicked4()">Nadiem Makarim
+					<input id="ans-15" type="radio" name="question4" value="c">
+					<label for="ans-15">Hectocorn</label> <br>
+					<input id="ans-16" type="radio" name="question4" value="d" onclick="clicked4()">
+					<label for="ans-16">Pegasus</label>
 				</div>
 			</div>
 
 			<div class="box">
-				<img src="/res/wheel1.png" width="100px" height="100px" alt="qimg">
-				<div class="question">Tanggal berapa hari Sumpah Pemuda?</div> 
+				<!-- <img src="/res/wheel1.png" width="100px" height="100px" alt="qimg"> -->
+				<div class="question">Dibawah ini produk simpanan yang ada di BCA, kecuali</div> 
 		
 				<div class="ansrow-1">
-					<input id="ans-17" type="radio" name="question5" value="a" onclick="clicked5()">28 Oktober<br>
-					<input id="ans-18" type="radio" name="question5" value="b">10 November
+					<input id="ans-17" type="radio" name="question5" value="a" onclick="clicked5()">
+					<label for="ans-17">Tahapan</label> <br>
+					<input id="ans-18" type="radio" name="question5" value="b">
+					<label for="ans-18">Tahapan Xpresi</label>
 				</div>
 				<div class="ansrow-2">
-					<input id="ans-19" type="radio" name="question5" value="c">18 Agustus<br>
-					<input id="ans-20" type="radio" name="question5" value="d">1 Juni
+					<input id="ans-19" type="radio" name="question5" value="c">
+					<label for="ans-19">Tahapan Super</label> <br>
+					<input id="ans-20" type="radio" name="question5" value="d">
+					<label for="ans-20">TabunganKu</label>
 				</div>
 			</div>
 	
