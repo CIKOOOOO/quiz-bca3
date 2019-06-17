@@ -195,32 +195,34 @@ function clicked5(){
 
 function getValue(){
 	var ans1 = 0, ans2 = 0, ans3=0, ans4=0, ans5 = 0;
-	if(document.getElementById('ans-2').checked){
+	if(document.getElementById('ans-1').checked){
 		ans1 += 20*(25-parseInt(document.getElementById("quest1").value));
 	}
 	else ans1 += 5;
 
-	if(document.getElementById('ans-8').checked){
+	if(document.getElementById('ans-7').checked){
 		ans2 += 20*(25-parseInt(document.getElementById("quest2").value));
 	}
 
 	else ans2 += 5;
 
-	if(document.getElementById('ans-9').checked){
+	if(document.getElementById('ans-12').checked){
 		ans3 += 20*(25-parseInt(document.getElementById("quest3").value));
 	}
 	else ans3 += 5;
 
-	if(document.getElementById('ans-16').checked){
+	if(document.getElementById('ans-14').checked){
 		ans4 += 20*(25-parseInt(document.getElementById("quest4").value));
 	}
 	else ans4 += 5;
 
-	if(document.getElementById('ans-17').checked){
+	if(document.getElementById('ans-19').checked){
 		ans5 += 20*(25-parseInt(document.getElementById("quest5").value));
 	}
 	else ans5 += 5;
 	updateData(ans1,ans2,ans3,ans4,ans5);
+	// console.log(parseInt(document.getElementById("quest5").value));
+	
 }
 
 function updateData(q1, q2, q3, q4, q5) {
