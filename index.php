@@ -62,9 +62,9 @@
 				<div class="question">Apakah kepanjangan dari ATM?</div> 
 	
 				<div class="ansrow-1">
-					 <input id="ans-1" type="radio" name="question1" value="a">  
+					 <input id="ans-1" type="radio" name="question1" value="a" onclick="clicked1()">  
 					 <label for="ans-1">Automatic Teller Machine</label> <br>
-					 <input id="ans-2" type="radio" name="question1" value="b" onclick="clicked1()">
+					 <input id="ans-2" type="radio" name="question1" value="b">
 					 <label for="ans-2">Automatic Teler Motor</label>
 				</div>
 				<div class="ansrow-2">
@@ -99,7 +99,7 @@
 				<div class="question">Apakah kepanjangan dari EDC? </div> 
 		
 				<div class="ansrow-1">
-					<input id="ans-9" type="radio" name="question3" value="a" onclick="clicked3()">
+					<input id="ans-9" type="radio" name="question3" value="a">
 					<label for="ans-9">Economic Data Calculator</label> <br>
 					<input id="ans-10" type="radio" name="question3" value="b">
 					<label for="ans-10">Electronis Data Capture</label>
@@ -108,7 +108,7 @@
 				<div class="ansrow-2">
 					<input id="ans-11" type="radio" name="question3" value="c">
 					<label for="ans-11">Economic Data Calculator</label> <br>
-					<input id="ans-12" type="radio" name="question3" value="d">
+					<input id="ans-12" type="radio" name="question3" value="d" onclick="clicked3()">
 					<label for="ans-12">Electronic Data Capture</label>
 				</div>
 			</div>
@@ -120,13 +120,13 @@
 				<div class="ansrow-1">
 					<input id="ans-13" type="radio" name="question4" value="a">
 					<label for="ans-13">Unicorn</label> <br>
-					<input id="ans-14" type="radio" name="question4" value="b">
+					<input id="ans-14" type="radio" name="question4" value="b" onclick="clicked4()">
 					<label for="ans-14">Decacorn</label>
 				</div>
 				<div class="ansrow-2">
 					<input id="ans-15" type="radio" name="question4" value="c">
 					<label for="ans-15">Hectocorn</label> <br>
-					<input id="ans-16" type="radio" name="question4" value="d" onclick="clicked4()">
+					<input id="ans-16" type="radio" name="question4" value="d">
 					<label for="ans-16">Pegasus</label>
 				</div>
 			</div>
@@ -136,13 +136,13 @@
 				<div class="question">Dibawah ini produk simpanan yang ada di BCA, kecuali</div> 
 		
 				<div class="ansrow-1">
-					<input id="ans-17" type="radio" name="question5" value="a" onclick="clicked5()">
+					<input id="ans-17" type="radio" name="question5" value="a">
 					<label for="ans-17">Tahapan</label> <br>
 					<input id="ans-18" type="radio" name="question5" value="b">
 					<label for="ans-18">Tahapan Xpresi</label>
 				</div>
 				<div class="ansrow-2">
-					<input id="ans-19" type="radio" name="question5" value="c">
+					<input id="ans-19" type="radio" name="question5" value="c" onclick="clicked5()">
 					<label for="ans-19">Tahapan Super</label> <br>
 					<input id="ans-20" type="radio" name="question5" value="d">
 					<label for="ans-20">TabunganKu</label>
