@@ -56,7 +56,7 @@
 	<!-- screen 2 -->
 	<div id="bodycontainer2">
 		<div class="container2">
-		<!-- <progress value="0" max="25" id="progressBar"></progress> -->
+		<progress value="0" max="25" id="progressBar"></progress>
 			<div class="box">
 				<!-- <img src="/res/bca.png" width="100px" height="100px" alt="qimg"> -->
 				<div class="question">Apakah kepanjangan dari ATM?</div> 
@@ -65,13 +65,13 @@
 					 <input id="ans-1" type="radio" name="question1" value="a" onclick="clicked1()">  
 					 <label for="ans-1">Automatic Teller Machine</label> <br>
 					 <input id="ans-2" type="radio" name="question1" value="b">
-					 <label for="ans-2">Automatic Teler Motor</label>
+					 <label for="ans-2">Automatic Teler <br> Motor</label>
 				</div>
 				<div class="ansrow-2">
 					 <input id="ans-3" type="radio" name="question1" value="c">
 					 <label for="ans-3">Automated Teller Machine</label> <br>
 					 <input id="ans-4" type="radio" name="question1" value="d">
-					 <label for="ans-4">Automated Teler Motion</label>
+					 <label for="ans-4">Automated Teler <br> Motion</label>
 				</div>
 			</div>
 	
@@ -89,7 +89,7 @@
 						<input id="ans-7" type="radio" name="question2" value="c" onclick="clicked2()">
 						<label for="ans-7">Top up via Online Shop</label> <br>
 						<input id="ans-8" type="radio" name="question2" value="d">
-						<label for="ans-8">Top up via Mini Market</label>
+						<label for="ans-8">Top up via Mini <br> Market</label>
 
 				   </div>
 			</div>
