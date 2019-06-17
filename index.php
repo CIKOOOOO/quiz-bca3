@@ -83,7 +83,7 @@
 						<input id="ans-5" type="radio" name="question2" value="a">
 						<label for="ans-5">Top up via driver Go-Jek</label> <br>
 						<input id="ans-6" type="radio" name="question2" value="b">
-						<label for="ans-6">Top up via <br> Bank</label>
+						<label for="ans-6">Top up via Bank</label>
 				   </div>
 				   <div class="ansrow-2">
 						<input id="ans-7" type="radio" name="question2" value="c" onclick="clicked2()">
