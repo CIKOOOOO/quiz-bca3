@@ -273,7 +273,7 @@ function totalscore(score, nick) {
 	var finalNickname = document.getElementById("inputNickname").value.toLowerCase();
 	const fb = firebase.database().ref();
 	var data = {total_score:score};
-	pushTotalScore(score, nickname);
+	pushTotalScore(score, nick);
 	fb.child('users/'+finalNickname).update(data);
 }
 
