@@ -63,7 +63,6 @@ function showTotalScore(){
 
 
 function submitClick(){
-	var firebaseRef = firebase.database();
 	var finalNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var checkNick = firebase.database().ref("users");
 	document.documentElement.scrollTop = 0;
@@ -104,9 +103,9 @@ function trueCond(){
 	document.getElementById("bodycontainer3").style.display = "none";
 	document.getElementById("bodycontainer2").style.display = "block";
 
-	var timeleft = 25;
+	var timeleft = MAX_PROGRESS_TIME;
 	downloadTimer = setInterval(function(){
-		document.getElementById("progressBar").value = 25 - timeleft;
+		document.getElementById("progressBar").value = MAX_PROGRESS_TIME - timeleft;
 		timeleft -= 1;
 		if(timeleft == -2){
 			submitData();
