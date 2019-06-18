@@ -90,7 +90,7 @@ body{
 /* mainquiz */
 
 #bodycontainer2{
-    background-color: #26a8a3;
+    background-color: blue;
     display: none;
     position: relative;
     margin: 0px;
@@ -150,7 +150,6 @@ body{
     padding: 20px 0px;
     font-size:16px;
     border: 1px solid #444;
-    margin-top: 1px;
     width: 98%;
 }
 
@@ -179,7 +178,6 @@ body{
     background-color:#ddd;
     padding: 10px 0px;
     font-size:16px;
-    margin-top: 1px;
     border: 1px solid #444;
     width: 98%;
 }
@@ -304,7 +302,7 @@ body{
     }
   }
   
-  /* @media screen and (min-width:480px) and (orientation:landscape){ 
+  @media screen and (min-width:480px) and (orientation:landscape){ 
     html{
         background-image: url("../res/portraitonly.png");
         background-repeat: repeat;
@@ -315,4 +313,4 @@ body{
         display: none;
         visibility: hidden;
     }
-} */
+}
