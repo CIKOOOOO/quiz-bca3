@@ -301,7 +301,7 @@ body{
       transform: rotate(360deg);
     }
   }
-  
+/*   
   @media screen and (min-width:480px) and (orientation:landscape){ 
     html{
         background-image: url("../res/portraitonly.png");
@@ -313,4 +313,4 @@ body{
         display: none;
         visibility: hidden;
     }
-}
+} */
