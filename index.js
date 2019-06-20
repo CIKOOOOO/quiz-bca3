@@ -28,7 +28,9 @@ function showTotalScore(){
 			document.getElementById("bodycontainer3").style.display = "block";
 			document.getElementById("bodycontainer2").style.display = "none";
 			document.getElementById("nickname").innerHTML = finalNickname;
-			document.documentElement.scrollTop = 0;
+			// document.documentElement.scrollTop = 0;
+
+			window.scrollTo(0, document.body.scrollHeight);
 
 			firebase.database()
 			.ref(`users/${finalNickname}/`)
@@ -67,6 +69,8 @@ function submitClick(){
 	var finalNickname = document.getElementById("inputNickname").value.toLowerCase();
 	var checkNick = firebase.database().ref("users");
 	document.documentElement.scrollTop = 0;
+	window.scrollTo(0, document.body.scrollHeight);
+
 	
 	loadsc();
 	checkNick.once("value")
