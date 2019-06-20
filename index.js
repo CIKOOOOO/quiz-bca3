@@ -28,6 +28,7 @@ function showTotalScore(){
 			document.getElementById("bodycontainer3").style.display = "block";
 			document.getElementById("bodycontainer2").style.display = "none";
 			document.getElementById("nickname").innerHTML = finalNickname;
+			document.documentElement.scrollTop = 0;
 
 			firebase.database()
 			.ref(`users/${finalNickname}/`)
