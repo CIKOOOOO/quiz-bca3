@@ -28,7 +28,7 @@ function showTotalScore(){
 			document.getElementById("bodycontainer3").style.display = "block";
 			document.getElementById("bodycontainer2").style.display = "none";
 			document.getElementById("nickname").innerHTML = finalNickname;
-			// document.documentElement.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
 
 			window.scrollTo(0, document.body.scrollHeight);
 
